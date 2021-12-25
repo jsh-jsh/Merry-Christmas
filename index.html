@@ -127,7 +127,6 @@
 			  cursor: pointer;
 			  position: absolute;
 			  outline: 1px solid transparent;
-			  transform: rotate(0deg) translate(175px, 0);
 			}
 			
 			.cart-page-front {
@@ -235,7 +234,53 @@
 			    width: 150px;
 			  }
 			}
+			.click-icon {
+			  position: absolute;
+			  left: 50%;
+			  transform: translate(-50%, 0);
+			  bottom: 20px;
+			  -webkit-animation: iconAnimation 1s infinite alternate ease-in-out;
+			  animation: iconAnimation 1s infinite alternate ease-in-out;
+			  transition: opacity 0.5s ease-in-out;
+			  opacity: 1;
+			}
+			.click-icon svg {
+			  width: 96px;
+			  height: 96px;
+			}
+			@media (max-width: 767px) {
+			  .click-icon svg {
+			    width: 72px;
+			    height: 72px;
+			  }
+			}
+			@media (max-width: 479px) {
+			  .click-icon svg {
+			    width: 48px;
+			    height: 48px;
+			  }
+			}
+			.click-icon.is-hidden {
+			  opacity: 0;
+			}
 			
+			@-webkit-keyframes iconAnimation {
+			  0% {
+			    transform: translate(-50%, 0);
+			  }
+			  100% {
+			    transform: translate(-50%, 10px);
+			  }
+			}
+			
+			@keyframes iconAnimation {
+			  0% {
+			    transform: translate(-50%, 0);
+			  }
+			  100% {
+			    transform: translate(-50%, 10px);
+			  }
+			}
 			
 			p {
 			  font-family: "Mirza", Verdana, Arial, serif;
